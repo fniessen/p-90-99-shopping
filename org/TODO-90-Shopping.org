@@ -17,8 +17,6 @@ https://www.amazon.fr/Fotopro-tr%C3%A9pied-t%C3%A9l%C3%A9phone-rotation-portable
 
 * 90-99 Shopping                                                      :shopping:
 
-See also [[file:90-Shopping.org]].
-
 ** TODO Vendre le lisseur de cheveux acheté pour Mar
 
 https://www.2dehands.be/seller/view/m2241284250
@@ -145,7 +143,7 @@ https://ouraring.com/
 - "Why We Sleep" by Matthew Walker.
   Listen to https://jrelibrary.com/1109-matthew-walker/
 
-*** NEXT Faire des achats sur Amazon
+*** TODO Faire des achats sur Amazon
 
 - [ ] Oreillettes *anti-ondes Airtube*
 - [ ] Gilette Mach 3
@@ -347,6 +345,26 @@ away after the installation !!!
   TL-PA8015P KIT
   Amazon B00XMVGM74
 
+** TODO 004.6782- Changer mon adresse du compte Microsoft OneDrive (fni@missioncriticalit.com)
+[2015-11-11 Wed 16:13]
+
+http://onedrive.live.com/
+
+** TODO Transfer pirilampo.net to OVH
+
+** MAYB Clean Code (Robert Martin)
+
+See videos on Youtube, such as:
+https://www.youtube.com/watch?v=QedpQjxBPMA&list=PLlu0CT-JnSasQzGrGzddSczJQQU7295D2
+
+(See also Martin Fowler.)
+
+** TODO Utility to display on screen the currently pressed keys
+
+https://www.thregr.org/~wavexx/software/screenkey/
+
+
+
 * Flowers
 
 ** Bonnes manières
@@ -510,12 +528,4 @@ objects...
 Pour l'achat ou la *réparation d'électroménager*, voir http://www.naverkoop.be/.
 
 Ce sont des gens de la marque elle-même.
-
-** Projecteur
-
-https://www.amazon.fr/WISELAZER-Projecteur-R%C3%A9solution-Compatible-Chromecast/dp/B08PNVH8HP/ref=sr_1_1_sspa?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=14TZBMI3I2OP&dchild=1&keywords=projecteur+4k+natif&qid=1624216185&sprefix=projecteur+4k%2Caps%2C163&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyRjZNTlo5V1FRNjQ3JmVuY3J5cHRlZElkPUEwNTU5OTkzNlNXUkFLTE8xMDlZJmVuY3J5cHRlZEFkSWQ9QTAzNDI3NDYzTE5SMDg5MkMwRFVVJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==
-
-https://www.amazon.fr/Vid%C3%A9oprojecteur-BOMAKER-Projectoravec-Trap%C3%A9zo%C3%AFdale-R%C3%A9troprojecteur/dp/B07Y9N2WRC/ref=sr_1_3_sspa?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=projecteur+4k+laser&qid=1624216440&sr=8-3-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyMDRSRFFPWlVZUVg0JmVuY3J5cHRlZElkPUEwMDQwMDMySlRZQktLMlVNSDlQJmVuY3J5cHRlZEFkSWQ9QTA0NDc1NzM3UEZITkJFWUxKUUUmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl
-
-https://www.amazon.fr/Xiaomi-Projecteur-Laser-Dolby-M%C3%A9tallique/dp/B08F5KRX6W/ref=sr_1_5?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=projecteur+laser+full+hd&qid=1624216633&sr=8-5
 
