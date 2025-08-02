@@ -1,0 +1,2326 @@
+#+TITLE:     Computer
+#+AUTHOR:    Fabrice Niessen
+#+EMAIL:     (concat "fni" at-sign "pirilampo.be")
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:4 num:t toc:2
+
+#+FILETAGS:  :personal:
+#+SETUPFILE: ~/org/theme-readtheorg.setup
+
+* Tasks
+
+** Install Linux soft (compare sha)
+
+This uses the standard GNU autotools, so it's the normal dance:
+
+#+begin_src shell
+curl -LO https://thoughtbot.github.io/rcm/dist/rcm-1.3.3.tar.gz &&
+
+sha=$(sha256 rcm-1.3.3.tar.gz | cut -f1 -d' ') &&
+[ "$sha" = "935524456f2291afa36ef815e68f1ab4a37a4ed6f0f144b7de7fb270733e13af" ] &&
+
+tar -xvf rcm-1.3.3.tar.gz &&
+cd rcm-1.3.3 &&
+
+./configure &&
+make &&
+sudo make install
+#+end_src
+
+For more, see INSTALL.
+
+** Convert any .pdf file into an audio book
+
+https://dev.to/mustafaanaskh99/convert-any-pdf-file-into-an-audio-book-with-python-1gk4
+
+** How can developers and product managers work better together?
+
+What has worked well? What could have been improved?
+https://dev.to/radiomorillo/how-can-developers-and-product-managers-work-better-together-p24
+
+** When do you work on your side projects?
+
+https://dev.to/ben/when-do-you-work-on-your-side-projects-2bic
+
+** Linux Live USB Creator
+
+https://www.youtube.com/watch?v=PzRXF6qGrGQ
+
+** USB read-only
+
+https://blogs.technet.microsoft.com/askcore/2011/06/02/my-disk-is-read-only-help/
+
+** How to Fix "The device is currently in use' and Safely Remove the USB Mass Storage Device?
+
+https://www.easeus.com/storage-media-recovery/this-device-is-currently-in-use.html
+
+** Vous n'avez pas besoin d'une clé de produit pour installer et utiliser Windows 10
+
+https://www.phhsnews.com/you-don-t-need-product-key-to-install-and-use-windows-103736
+
+** Télécharger l'image ISO de Windows 10
+
+Pour obtenir les liens de téléchargement depuis les serveurs de Microsoft, il
+suffit désormais de visiter la page suivante :
+https://www.microsoft.com/fr-fr/software-download/windows10ISO/
+
+Toutefois, si vous possédez déjà Windows 10, cette page sera redirigée vers
+l'outil Media Creation Tool, qui permet de télécharger directement l'ISO depuis
+l'outil.
+
+Il est néanmoins possible de forcer l'affichage de la page en "faisant croire"
+qu'il s'agit d'un navigateur fonctionnant sur une plateforme autre :
+
+- Sous Google Chrome, faire Ctrl+Maj+i puis Ctrl+Maj+m afin de forcer l'affichage mobile.
+- Sous Mozilla Firefox, faire Ctrl+Maj+M et sélectionner un appareil mobile.
+
+https://www.commentcamarche.net/faq/48988-telecharger-l-image-iso-de-windows-10
+
+* Software
+
+** Logitech Options
+
+https://www.reddit.com/r/LogitechG/comments/fw9pl6/logitech_flow_unable_to_enable/
+
+On windows 10, I went into Windows security>home> scroll down to see "allow an
+app through firewall" > search for logioptionsmgr.exe and logioptionsmgr.EXE
+(UNICODE) and enable private/public. (you may need to manually add the .exe to
+the allowed app list.
+
+After that, restart logitech options, tried to enable flow once again and after
+no more than 5 seconds, both computers were able to communicate.
+
+One point to clarify for anybody else that finds this:
+
+Regarding the 'logioptionsmgr.exe' and 'logioptionsmgr.EXE' issue, the missing
+application was 'LogiOptions.exe', not 'logioptionsmgr.exe'.
+
+I was only able to see 'LogiOptionsMgr.EXE' in the list of allowed apps. I had
+to manually add the 'LogiOptions.exe (UNICODE)' application.
+
+To manually add it, click the 'Allow another app' button under the list of
+allowed applications. You'll want to specify the path 'C:\Program
+Files\Logitech\LogiOptions\LogiOptions.exe', or the path to the application if
+you installed it elsewhere.
+
+** Comparaisons de software
+
+Welcome to [[http://www.wikivs.com/][WikiVS]]: open, up-to-date comparisons
+
+or compare anything at http://getcomparisons.com/
+
+*** Find software alternative to ...
+
+http://alternativeto.net/software/
+
+*** Picasa vs Flickr
+
+http://www.diffen.com/difference/Flickr_vs_Picasa
+
+** Online OCR -- Convert scanned PDF
+
+http://www.onlineocr.net/
+
+(You can recognize only 15 pages per hour in a free guest mode.)
+
+** Excel viewer
+
+https://sheet.zoho.com/sheet/excelviewer
+
+** Shortcut in Word or Excel for Special Paste
+
+I've just found out that in Word 2013 and Excel 2013 there is a quick way to
+access, from keyboard, all the /"Paste Special"/ options. In the following
+examples it is just shown how to paste as text (without pasting the formats).
+
+- *Word 2013:*
+
+  After having copied something go where you want to paste it (without pasting the
+  format). ~CTRL+V~ (it will temporarily paste the format too) then ~CTRL~ (push and
+  release the control key) then ~T~ (the last T means "keep text only").
+
+- *Excel 2013:*
+
+  After having copied something go where you want to paste it (without pasting the
+  format). ~CTRL+V~ (it will temporarily paste the format too) then ~CTRL~ (push and
+  release the control key) then ~V~ (the last V means "paste Values").
+
+It's important that the /second/ ~CTRL~ key is released before typing the last
+letter.
+
+This method requires just 4 keyboard hits, no macros and no use of the mouse in
+a dialog window.
+
+** Draw.io
+
+https://www.draw.io/
+
+Simple tool offering presets for software development.
+
+** SumatraPDF
+
+*** Highlight
+
+Recent change in highlight key from H to A!
+
+To highlight an area, use Ctrl and mouse Left button to "drag" an area; then
+release Ctrl and press A.
+
+See https://github.com/GitHubRulesOK/MyNotes/blob/master/AppNotes/SumatraPDF/Annotation%20in%20SumatraPDF.pdf
+
+*** Way to read comments
+
+Just hover over them and the text shows up...
+
+** Free basic editing of PDF files
+
+http://www.pdfescape.com
+
+** Communications
+
+*** Alternative to Skype
+
+With the rise of *governmental monitoring programs*, [[https://tox.im/][Tox]], a FOSS initiative, aims
+to be an easy to use, all-in-one communication platform that ensures their
+users *full privacy* and secure message delivery.
+
+Another promising alternative (being basically usable by
+non-technically-oriented users) to Skype at this point is Jitsi, which is
+licensed under the LGPL 2.1:
+
+http://www.jitsi.org/
+
+but it seems to me that the project needs a significant influx of
+contributors willing and able to fix bugs, implement features / feature
+requests, etc.
+
+*** Signal (vs WhatsApp) to speak freely
+
+https://signal.org/
+
+** DeepL -- Free translation tool, 3 times more effective than Google Translate
+
+https://www.deepl.com/translator
+
+In only 6 months DeepL has become indispensable for aspiring translators and is
+now teaching giants like Google Translate a lesson.
+
+DeepL is a free translation tool from DeepL GmbH company which uses the famous
+multilingual dictionary database, Linguee. Consequently, the real power behind
+Deep’l is *Linguee*. First and foremost, DeepL’s Artificial Intelligence is
+"learning" thanks to the millions of texts and translations posted on
+Linguee. DeepL is an abbreviation for "Deep Learning". However, one would expect
+Google AI to learn even more. Let’s not forget that the keyword "Google
+translate" is searched 45,500,000 times a month. Furthermore, DeepL AI and
+Google Translate AI both use neural network technology, and yet DeepL AI is,
+nevertheless, better. How does DeepL work better when using a similar
+technology? The answer is simple: the performance of a neural network depends on
+the *quality* of its learning 1 materials and not just on quantity. DeepL’s neural
+networks evolve 2 from billions of high-quality translation segments from the
+Linguee database. Its main contributors are reliable sources: the European
+Parliament, Unesco patents and literary works.
+
+Other tools:
+- https://www.linguee.fr/
+- https://www.wordreference.com/fr/
+- https://translate.google.com/
+
+** Check disk (chkdsk)
+
+We can run the disk diagnostic software to detect and *mark bad sectors*. Sectors
+marked as bad will be *skipped*. Logical sectors will then be remapped to a good
+free space (spare sector pool) as a means of "repair". In short, ditch the old
+place and rebuild somewhere else.
+
+#+begin_src shell
+chkdsk e: /F /R /X
+#+end_src
+
+You may check the real amount of bad and slow-read sectors using tools like
+HDDScan to scan the disk surface.
+
+*** Fix bad sectors (for NTFS partitions!) - Linda
+
+https://askubuntu.com/questions/47700/fix-corrupt-ntfs-partition-without-windows
+
+: sudo ntfsfix -b -d /dev/sda1
+
+avoid these bad sectors
+
+What is the fastest way to mark bad sectors *without data recovery*?
+https://superuser.com/questions/694422/what-is-the-fastest-way-to-mark-bad-sectors-without-data-recovery
+
+: /sbin/badblocks -svn -b512 /dev/sda
+
+*** Have filesystem incorporate bad sectors
+
+https://wiki.archlinux.org/index.php/badblocks
+
+To not use bad sectors they have to be known by the filesystem.
+
+During filesystem check
+
+Incorporating bad sectors can be done using the filesystem check utility
+(fsck). fsck can be told to use badblocks during a check. To do a read-write
+(non-destructive) test and have the bad sectors made known to the filesystem
+run:
+
+: fsck -vcck /dev/device-PARTITION
+
+The -cc option tells run fsck in non-destructive test mode, the -v tells fsck to
+show its output, and the -k option preserves old bad sectors that were detected.
+
+** Outil de test des disques durs
+
+Sur CD de recovery, choisir Vivard.
+
+** Shared folder -- online file storage
+
+- DropBox
+- https://www.box.com
+- Pogoplug
+
+** Vaadin based CMS: Magnolia (from Maxime Van Assche)                    :mail:
+[2013-05-15 Wed 16:29]
+
+#+begin_verse
+In the recent CMS discussion, the CMS I keep an eye on is Magnolia.
+Because it is not PHP based (but Java), because it is based on Vaadin (which is based on GWT),
+because the content editing is in-site.
+
+I don't know exactly how good it is, but if I were to try a CMS in any context, I would look at this one.
+
+http://www.magnolia-cms.com/
+http://community.magnolia-cms.com/
+http://www.youtube.com/watch?feature=player_embedded&v=Rie2-HLVSek
+#+end_verse
+
+** yEd
+
+I must say however when I draw diagrams I use yEd, which is incredibly powerful
+and auto-formatting. These diagrams can be exported to PDF and put in Org
+easily.
+
+* Coding General rule
+
+A general rule to follow is *return early when invalid conditions found*.
+
+See example at
+https://dev.to/hellomeghna/tips-to-write-better-conditionals-in-javascript-2189.
+
+** Demystifying Modern Frontend Jargon
+
+Pure functions, etc.
+https://dev.to/ananyaneogi/demystifying-modern-frontend-jargon-1agf
+
+** Reviewing patches
+
+[Moved the discussion to emacs-devel.]
+
+> From: Dmitry Gutov <dgutov@yandex.ru>
+> Date: Sat, 06 Dec 2014 04:27:22 +0200
+>
+> Stefan Monnier <monnier@iro.umontreal.ca> writes:
+>
+> > Because nobody has set such a thing up (and AFAICT Savannah doesn't
+> > have such a thing built-in, oddly enough).
+>
+> It shouldn't be too hard, actually, to set up some code review tool,
+> such as Gerrit [0], Review Board [1] or Differential [2].
+
+I took a quick look at these.
+
+I think by far the 2 main issues we will have with these tools are:
+
+ . The tools don't have Emacs integration built into them, nor offer
+   Emacs VC sub-modes.  (Gerrit has a magit plugin.)  I'm guessing we
+   would like to arrange for such an integration in VC, because people
+   who review patches are accustomed to using Emacs and have elaborate
+   customizations for this that they would lose if the review is only
+   done via a Web browser (even if that browser is eww).
+
+ . The tools require non-trivial changes in the workflow advertised on
+   the Wiki.  E.g., Gerrit requires to work with magic local branches
+   and detached heads.  We should carefully evaluate this and decide
+   how to make sure this won't trip those of us who are less
+   proficient in Git (which, judging by the current traffic on
+   emacs-devel, seems like a rule rather than exception) and cause
+   corruption of the upstream repository.
+
+There are also other minor issues we need to figure out: licenses, the
+underlying infrastructure (e.g., AFIU, Phabricator requires PHP), etc.
+
+Personally, I think arranging the development around this kind of
+process will not work without some critical mass of patch reviewers
+who are able to endure the current constant high volume of changes,
+let alone if we want to increase that volume.  Being an efficient
+patch reviewer requires good knowledge of at least a few areas of the
+Emacs core, and we currently have only a handful of people who can
+qualify.  (The obvious exception from this rule is a maintainer of a
+single package who can review patches for his/her package.)  From
+experience of other projects, 5 reviewers is not enough for this task.
+
+So we are again back to the hardest problem in Emacs development: the
+extremely small number of core maintainers.
+
+> I'd also welcome opinions from people who have experience working with
+> them
+
+Seconded.
+
+> What do you see as requirements for such a tool? Integration with
+> Savannah user database?
+
+I think given the current state of affair, the requirements are very
+low: pretty much anything would be better than what we have now.
+
+The only issues I can think of are that they should be installed on
+machines we can control ourselves, and either they're very light on
+browser resource usage or they provide some lighterweight (in terms of
+resource usage) interface (such as control via email).
+Being able to work with it offline is a plus.
+
+** Patch reviewing systems
+
+We use gerrit at work so I can comment for it.
+
+On Saturday, December 06, 2014 08:12:31 AM Ted Zlatanov wrote:
+> My wishlist for a patch queue management system (PR/pull request system
+> for those familiar with the Github model):
+>
+> * targeted hydra builds for a specific branch
+I don't know hydra. We use jenkins which has a very good plugin to integrate
+with gerrit. Every commit that lands in gerrit triggers a jenkins build and
+jenkins leaves a vote afterwards in gerrit. Thus a human doesn't need to do a
+review as long as the jenkins build isn't good.
+
+> * a click-and-done way to merge a specific branch into master or emacs-24
+This is called 'submit' in gerrit and it's click-and-done.
+
+> * maybe a comment system
+In gerrit you can comment and reply on every line of the commit, the commit
+message or comment on the whole change.
+
+> * maybe debbugs integration (but I do hate debbugs... really hate it...)
+- easy: link from gerrit changes to debbugs if a bug is referenced in the
+commit message
+- a bit more involved: trigger debbugs actions for actions in gerrit (new
+change, change merged...)
+
+> * ability to review the potential ChangeLog entries that will be
+>   generated from the commit
+The commit message is part of the review. We generate changelogs from commit
+messages and add an 'ignore:' trailer if a commit should not be included in
+the changelog.
+
+A massive advantage of gerrit over reviewboard as used by the Apache
+Foundation is the frictionless integration with git.
+
+On the other hand gerrit is extremely powerful and customizable which might be
+a problem for somebody setting it up for the first time.
+
+** Code review
+
+On 12/06/2014 07:06 AM, Stefan Monnier wrote:
+>> What do you see as requirements for such a tool? Integration with
+>> Savannah user database?
+>
+> I think given the current state of affair, the requirements are very
+> low: pretty much anything would be better than what we have now.
+
+Okay then. Savannah integration would be a complication for me personally.
+
+> The only issues I can think of are that they should be installed on
+> machines we can control ourselves, and either they're very light on
+> browser resource usage  or they provide some lighterweight (in terms of
+> resource usage) interface (such as control via email).
+
+I don't know if any of them can be considered heavy on the browser. Phabricator
+seems to be the most "slick" (and probably resource-intensive), but it also
+includes a powerful command-line tool, or so they say.
+
+Here they are live:
+
+https://git.eclipse.org/r/
+http://demo.reviewboard.org/r/
+https://secure.phabricator.com/
+
+> Being able to work with it offline is a plus.
+
+Basically, something like a layer on top of Git? That might be nice, but
+probably not in the cards.
+
+* Notes
+
+** 10 basic examples of Linux netstat command
+
+https://www.binarytides.com/linux-netstat-command-examples/
+
+** Managing and monitoring SQL Server on Linux from the command line (with mssql-cli, awk, join, column, etc.)
+
+https://www.google.be/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=2ahUKEwiJta36wfrkAhUBLFAKHSGrB04QFjACegQIBxAC&url=https%3A%2F%2Fwww.sqlsaturday.com%2FSessionDownload.aspx%3Fsuid%3D23186&usg=AOvVaw0aLIlIUNZMCzzzaOP-e3P6
+
+** 18 DevTools for productivity
+
+https://dev.to/christopherkade/18-devtools-for-productivity-5ia
+
+DevHints cheatsheets:
+You keep on forgetting the syntax of that one framework or tool?
+
+** Cheat sheets
+
+Over 4,000 Free Cheat Sheets, Revision Aids and Quick References!
+
+https://cheatography.com/
+
+** Bash script to convert SVN to Git
+
+https://dzone.com/articles/bash-script-convert-subversion
+
+* Windows
+
+** How to delete temporary files in Windows
+
+- Windows-R, then ~%temp%~
+- Empty Recycle bin
+- Windows-R, then ~cleanmgr~
+
+* Mail
+
+** Les meilleurs messages Out of Office Replies
+
+- L'impertinent
+
+  "Bonjour,
+  Je serai absent jusqu'au 27 août 2016.
+  En cas d'urgence, merci d'attendre mon retour."
+
+- Le geek
+
+  "Email Error 408 - The recipient is not around... until 24th of July"
+
+* R-project language
+
+** Produire une visualisation originale et engageante des données
+
+- http://www.processing.org/
+- http://www.learningprocessing.com/
+
+** Literate Programming in R
+
+https://yihui.name/rlp/
+
+** How to lie with statistics?
+
+http://fr.slideshare.net/andreasklinger/startup-metrics-a-love-story
+
+- pages 45 to 53
+
+  Values 0, 0, 0, 100. Average: 25. Median: 0.
+
+  Values 0, 5, 10. Average: 5. Standard deviation: 4,08.
+
+  Correlation / Causality:
+  + Ice cream consumption
+  + Drownings
+  + ... Temperature
+
+** Scientific study must have control groups, etc. (from Achim Gratz)
+[2014-12-27 Sat 10:48]
+
+#+begin_verse
+Am 26.12.2014 um 23:47 schrieb Ken Mankoff:
+> People here might be interested in a publication from [2014-12-19 Fri]
+> available at http://dx.doi.org/10.1371/journal.pone.0115069
+>
+> Title: An Efficiency Comparison of Document Preparation Systems Used
+> in Academic Research and Development
+>
+> Summary: Word users are more efficient and have less errors than even
+> experienced LaTeX users.
+
+The way researcher efficiency is defined in that "study" completely misses the
+purpose of scientific publishing and it goes downhill from there.  The
+statistics are pseudo-scientific smokes and mirrors, no control groups, no
+normalization and not a single hint of why it should be acceptable to use normal
+distributions for something that clearly isn't normally distributed other than
+the obvious convenience of drawing wild conclusions from a small sample size.
+
+I'm still not sure if this isn't an elaborate joke, but I'm afraid not.
+#+end_verse
+
+From [[http://mid.gmane.org/m7lv8v$ftk$1%40ger.gmane.org][Email from Achim Gratz: Re: Efficiency of Org v. LaTeX]]
+
+#+begin_verse
+As well as having insufficient control of variables, and a flawed understanding
+of what is involved in "document preparation," the study also has a marginally
+small sample size. Any study for any purpose that presents "statistics" with
+sample sizes smaller than 30 is immediately suspect. I won't even begin to
+address the misinterpretation of correlation as causation that appears in the
+"softer" sciences, nor their necessity for sample sizes far larger than 100, nor
+the tendency in some fields to mistake a time series as a set of samples.
+#+end_verse
+
+From [[http://mid.gmane.org/op.xrirkdcirns8nc%40odin][Email from Peter Neilson: Re: Efficiency of Org v. LaTeX]]
+
+** Spurious correlation - divorce rate correlates with consumption of margarine
+
+Divorce rate in Maine correlates with Per capita consumption of margarine (US)
+
+tylervigen.com/view_correlation?id=1703
+
+** Run R Scripts on the Cluster!!!
+
+https://cyberhelp.sesync.org/quickstart/how-do-i-submit-an-r-script.html
+
+How data.table's fread can save you a lot of time and memory, and take input from shell commands
+https://jozef.io/r917-fread-comparisons/
+(with benchmarking method)
+
+*** How to run shell script in R and get the output into table?
+
+If the result 'table' has white-space separators and carriage-returns to mark
+lines, then you should pass the results to the 'text' argument of read.table:
+
+: inp.tbl <- read.table(text = system(command, intern = TRUE))
+
+(A caveat for users of earlier versions of R: The 'text' argument to read.table
+and derivatives thereof is a relatively recent addition.)
+
+** Syntax checker for R
+
+https://stackoverflow.com/questions/9713335/is-there-any-existing-syntax-checker-for-gnu-r
+
+** R_LIBS_USER
+
+R_LIBS_USER - user's library path, e.g. R_LIBS_USER=~/R/%p-library/%v is the
+folder specification used by default on all platforms and and R version. The
+folder must exist, otherwise it is ignored by R. The %p (platform) and %v
+(version) parts are R-specific conversion specifiers, cf. ?R_LIBS_USER
+
+: Sys.getenv("R_LIBS_USER")
+
+By default R_LIBS is unset, and R_LIBS_USER is set to directory
+'R/R.version$platform-library/x.y' of the home directory (or
+'Library/R/x.y/library' for CRAN macOS builds), for R x.y.z.
+
+*** R Library dependency hell
+
+https://stackoverflow.com/questions/56704109/r-package-not-available-in-batch-mode
+
+** Running your R script in Docker
+
+https://www.statworx.com/at/blog/running-your-r-script-in-docker/
+
+** Slides HTML5 à partir de R (avec graphiques dynamiques)
+
+Voici, à partir de R, une publication de slides sous HTML5 (et sous LaTeX
+Beamer ?).
+
+Regardes, en particulier, le graphique R (de 04:35 à 0:44) sur la vidéo de
+présentation : http://ramnathv.github.com/slidify/. Bluffant !
+
+* Automation
+
+** Write scripts to iterate fast
+
+Yes, everyone should write shell scripts. No matter what you are doing on a
+computer, it's often you want to get it done more than once. At that point,
+it should be in a shell script.
+
+I teach Apache Hadoop and in our courses we have students complete labs. The
+very first lab in one course is simply pushing files to HDFS:
+
+#+begin_src shell
+$ hadoop fs -put file .
+$ hadoop fs -ls
+#+end_src
+
+Even these trivial examples should be scripted. Why? Paul MacCready. Paul is
+one of the two inventors of the first *Human Powered Aircraft.* As this
+[[http://www.azarask.in/blog/post/the-wrong-problem/][excellent post argues]], Paul's solution to the problem was not that he was a
+better Engineer than those who had tried previously (though that could be true
+as well), but that Paul knew they had to iterate fast.
+
+    Paul realized that what we needed to be solved was not, in fact, human
+    powered flight. That was a red-herring. The problem was the process
+    itself, and along with it the blind pursuit of a goal without a deeper
+    understanding how to tackle deeply difficult challenges. He came up with a
+    new problem that he set out to solve: how can you build a plane that could
+    be rebuilt in hours not months.
+
+One again from [[http://www.azarask.in/blog/post/the-wrong-problem/][The Wrong Problem]].
+
+** Automation - I should write a program automating this task!
+
+https://xkcd.com/1319/
+
+** If this then that... automation
+
+https://www.frandroid.com/comment-faire/214864_ifttt-recettes-preferees
+
+* LaTeX
+
+** Config TEXMFVAR (kpsewhich)
+
+TEXMFVAR = ~/.dotfiles/local/home/texmf
+
+in texmf.cnf
+
+** Comparaison Word LaTeX (from Vincent Breton)
+[2014-05-05 Mon 13:10]
+
+En matière d'édition, j'ai eu l'occasion de travailler avec LaTeX mais aussi
+avec Word. Ce dernier outil m'a été imposé car les éditions antécédentes d'une
+œuvre collaborative avaient été réalisées avec cet outil.
+Hormis la rédaction d'un roman, la plupart de ceux qui utilisent Word dans le
+cadre d'une édition le font par incompétence (manque ou absence de
+compétences). On rencontre cela au niveau des auteurs mais aussi au niveau des
+éditeurs. Présentez un ouvrage complet au format PDF correctement mis en forme
+à l'aide de LaTeX n'est pas forcément un frein. Bien au contraire, cela peut
+lui faire gagner un temps précieux dans la photocomposition. N'ayant pas la
+compétence en interne, l'éditeur à sous traité ce dernier point au Maroc. Ce ne
+sont pourtant pas les compétences qui manquent en France ! Je me suis retrouvé
+avec l'insertion de fautes d'orthographes entrainant ainsi la génération
+d'épreuves intermédiaires supplémentaires avant la mise sous presse.
+
+Les éditeurs reconnaissent la supériorité de LaTeX en matière de rendu final
+mais il me semble bien qu'ils n'apprécient pas qu'un auteur soit en mesure de
+maîtriser l'aspect technique complet avant la mise sous presse de peur de les
+perdre. Il est aussi important de maîtriser l'aspect illustration. De nombreux
+paquets tel que PSTricks ou Tikz/PGF offrent cette possibilité sans parler de
+l'insertion de photographies. Sans cette précaution, votre œuvre sera dépendant
+de l'illustrateur de votre éditeur et vous serez davantage lié avec ce dernier
+vous freinant ainsi dans l'adaptation et le portage de vos écrits. Ceci étant
+dit, l'illustrateur associé directement à l'éditeur peut jouer pleinement son
+rôle dans le cadre de la publication d'ouvrages à très grand tirage ou
+éventuellement lorsque les illustrations apparaissent en bichromie.  Certains
+éditeurs vous proposent de ne pas vous attarder sur les illustrations sous
+prétexte qu'ils ont quelqu'un pour ça. Je vous invite à redoubler de prudence
+car vos croquis risquent de rester pratiquement en l'état... Quand aux photos et
+dessins pixelisés, dans 98% des cas je trouve cela tout simplement lamentable,
+surtout lorsque cela provient de très grand éditeur. J'ai encore eu l'occasion
+de rencontrer ce problème ces dernières semaines et bien souvent ce point suffit
+à me faire partir sans achat de chez mon libraire.
+
+A noter que certains éditeurs proposent gratuitement sur leur site des modèles
+LaTeX. On pourra en penser ce que l'on veut. Personnellement je pense que c'est
+un point de départ pour rejoindre la maison d'édition si l'on maîtrise son
+sujet et que l'on dispose de qualités rédactionnelles sur un domaine
+recherché. Si vous avez une certaine expérience de la typographie alors rien ne
+vous empêchera de développer vos propres mises en page mais dans un premier
+temps mieux vaut se tenir au éléments proposés.
+
+L'ebook devient le sujet tabou, la hantise des éditeurs mais aussi des
+auteurs. Le contrôle des ventes pour ces derniers ne présente aucune
+garantie. Certains éditeurs proposent même des promotions exagérées sur les
+versions électroniques. Le font-il en accord avec l'auteur ?
+
+Face à toutes ces difficultés, je ne peux qu'encourager les auteurs et futurs
+auteurs à persévérer dans leur travail rédactionnel et de mise en page sous
+LaTeX car seulement 0,3 % des œuvres sont publiées; cela ne signifie pas qu'il
+soit nécessaire d'écrire 300 documents pour en avoir un de publié; le choix de
+l'outil à son importance; à moins d'écrire un roman, oubliez vite les éditeurs
+qui ne jurent que par Word.
+
+Autre point important, lire et relire des ouvrages de qualité (grands auteurs,
+témoignages historiques, livres techniques...) avec un œil attentif sur le
+style, la tournure des phrases... de manière à persévérer et atteindre un
+niveau convenable pour devenir lisible.
+
+Seul la volonté et la persévérance comptent pour écrire convenablement. Le
+temps fera le reste. Continuez à écrire et n'abandonnez jamais quitte à oublier
+les détracteurs pour se focaliser sur vos travaux.
+
+Qu'est-ce qui ne vous convient pas dans la mise en forme ? En répondant sur ce
+point, il vous sera possible d'obtenir facilement des réponses techniques sur
+cette liste répondant précisément à vos besoins.
+
+** Key bindings à indiquer dans slides Dunkerque sur Emacs
+
+https://www.shortcutworld.com/es/linux/Emacs_23.2.1.html
+
+** Tex-fold-mode
+
+I don't use prettify-symbols-mode, but I am a fairly heavy user of AUCTeX's
+TeX-fold-mode, which hides all sorts of LaTeX code (and can be customised to
+hide even more in quite sophisticated ways). For example, it shows
+
+   This is some \textit{emphasised} text.
+
+as
+
+   This is some emphasised text.
+
+with the word "emphasised" in a different colour (to indicate that it's been
+folded) and with whatever fontification the argument of the \textit macro gets
+(italicised by default).
+
+Now, TeX-fold-mode has the behaviour you mention: as soon as you move point (not
+the mouse cursor) "into" some folded text, it gets unfolded (with | indicating
+point):
+
+   This is some |\textit{emphasised} text.
+
+with the part "\textit{emphasised}" highlighted to indicate that it's actuall
+folded.
+
+Personally, I'm a *big* fan of this behaviour.
+
+** Typography (why 2 columns?)
+
+> Other than theoretical principle, is there evidence that readers
+> prefer the look of the default LaTeX article sizing?
+
+Beyond all aesthetic meanings, there are some practical aspects that are
+valid for all presentations of text to readers.  The most important rule
+is that the number of characters per line shall not exceed 70.  Together
+with the chosen font, its size, and tracking, this rule defines the
+width of the type area.  Together with the interlinear space, this rule
+is relevant for the readability.  The longer the line, the larger (but
+not to large!) the interlinear space.
+
+Thus for printed papers where the most economical use of paper is
+important, a multi-column layout is the way to go to get the smallest
+margins.
+
+* Docker, etc.
+
+** Docker
+
+https://emacsbliss.com/2018/04/just-enough-docker-for-synology/
+
+** Vagrant box
+
+https://github.com/semmypurewal/node-dev-bootstrap
+
+** Kubernetes (K8s)
+
+Excellent video explaining how Kubernetes works (from Arjan):
+
+Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]
+https://www.youtube.com/watch?v=X48VuDVv0do
+
+* Partitions
+
+** Fusionner les partitions sur l'Asus (from Michael Niessen)
+[2017-07-01 Sat 13:30]
+
+#+begin_verse
+Sinon, je voulais en profiter que j'ai le nouveau disque dur externe pour
+réorganiser l'espace et je comptais enfin éliminer les saletés de partitions
+d'Asus. Pour rappel, la partition "recovery" est entre C et D, donc impossible
+de simplement effacer D et étendre C. J'ai donc voulu éliminer carrément
+"recovery", mais impossible aussi dans Disk Management parce que c'est une
+partition protégée. Après quelques minutes de recherches sur le net, j'ai vu
+dans un forum qu'on conseillait de Minitool Partition Wizzard (version gratuite
+sur https://www.partitionwizard.com/free-partition-manager.html).
+J'ai donc:
+1. effacé D
+2. déplacé "recovery" tout à la fin du disque (c'est pas pour la place que ça
+prend et on ne sait jamais, ça pourrait tout de même servir un jour)
+3. étendu C
+Tout a été fait en moins de 2 minutes, vraiment génial ! Ca sera mille fois
+mieux de n'avoir qu'un disque pour le pagefile, fichiers temporaires,
+etc... surtout s'il y a peu de place. Mais bon, je serai en principe tranquille
+un bon moment sur ce dernier point.
+
+#+end_verse
+
+* Shell
+
+** Doc about color codes in Unix (and moves, etc.)
+
+https://superuser.com/questions/380772/removing-ansi-color-codes-from-text-stream
+
+** 10 tips to improve Performance of Shell Scripts
+
+- Better file handling: Knowingly or unknowingly, a lot of files are created or
+  deleted in a shell script. Due to the use of large number of files, handling
+  of files become very important. Even a simple echo statement which re-directs
+  output to a file has to open the file first, write data into the file and
+  close the file. Let us look at an example:
+
+- Use ONLY the necessary commands inside a loop: It means not to use those
+  commands which are not needed inside the loop. But, its common sense right?
+  The point here is: Do not use commands inside loop which could very well have
+  been outside loop. Let us consider the below example:
+
+- One file to multiple files? Walk over the entire script: Whenever we have
+  a requirement to write a script which is going to run on lots of files, the
+  developer mindset is to write the script and make it work for one file. Once
+  it works with one file, make it work for multiple files either by adding
+  a loop or by passing command line arguments. Let us take the earlier example
+  for now. The developer could well have written the lines inside the loop by
+  hardcoding the variable "i", and once it is working, just enclosed the code
+  inside a for loop. Due to this approach, the date command remained
+  inside. . Lots of performance issue happens due to this reason.
+
+- Best option vs any option: The beauty in Unix or Unix flavors is it gives
+  multiple options to achieve anything in it. Regular readers of this blog
+  would have come across the umpteen articles on stuff wherein we explained the
+  different ways in which a particular output can be achieved.
+
+- Wherever possible, internal command always: In one of our articles, we saw
+  the difference between internal and external commands.  Internal commands are
+  internal to the shell which the shell executes without creating any process
+  whereas for the external commands, a process is created. Due to this,
+  internal commands are always much much faster compared to external command.
+
+- Avoid Useless use of any command: There is a popular term known as UUC which
+  stands for Useless use of cat. This means using cat command when actually it
+  is not needed at all. For example:
+
+- Achieve more with less: Say, you want to have 3 variables one containing the
+  year, next containing the current month and the third containing the day. So,
+  the commands for it could be:
+
+- Do not use ls always for file listing: Keep in mind, ls is not the only
+  command to list files, there are different options to list the files. Just do
+  a "echo *" at the prompt and see what happens!!!. When we want to process
+  many files in a loop, say to process all the .txt files in a loop:
+
+- sed/awk parses the entire file, by default: Say, you want to print the first
+  2 lines of a file using sed:
+
+- Using right conditions at right places in AND or OR: In
+
+http://www.theunixschool.com/2012/06/10-tips-to-improve-performance-of-shell.html
+
+** xargs -0
+
+La séquence =tr "\n" "\0" | xargs -0= permet de tenir compte de noms de répertoire
+avec des espaces : en effet la commande =tr "\n" "\0"= remplace le caractère de
+fin de ligne par =null= et l'option =-0= de =xargs= indique d'utiliser ce même
+caractère comme séparateur plutôt qu'une espace.
+
+** Use xargs to copy files that have spaces and quotes in their names
+
+: find -name '*FooBar*' -print0 | xargs -0 cp -t ~/foo/bar
+
+The '-t' switch is what I was missing...
+
+** xargs
+
+#+begin_src shell
+find . -name '*.code' -exec grep -H 'pattern' {} +
+#+end_src
+
+Make sure to quote '*.code' so the shell doesn't expand the * wildcard.
+Usually we do want the shell to do the expansion, but in this case we want the
+literal string *.code to be passed to find so it can do the wildcard expansion
+itself.
+
+When you use -exec you need to put {} somewhere; it's the placeholder for the
+file names that are found. You also need either \; or + at the end of the
+command. It's how you signal to find where the end of -exec's arguments are
+(it's possible to have other actions following -exec).
+
+- =\;= will cause grep to be run once for each file while
+- =+= runs a single grep on all of the files.
+
+[EDIT: 57s vs 2s on a sample directory!!!]
+
+#+begin_src shell
+find . -name '*.code' -print0 | xargs -0 grep -H 'pattern'
+#+end_src
+
+Another common way to do this is by chaining together find and xargs. I like
+using -exec better, but find+xargs works just as well. The idea here is that
+xargs takes file names passed in on stdin and runs the named command with
+those file names appended. To get a suitable list of file names passed in we
+pipe the output of a find command into xargs.
+
+The -print0 option tells find to print each file it finds along with a NUL
+character (\0). This goes hand in hand with xargs's -0 option. Using -print0
+and -0 ensures that we can handle file names with unusual characters like
+whitespace and quotes correctly.
+
+** sed vs tr
+
+I always like to use tr instead of sed for deleting characters. Not that it
+makes much difference, but it's definitely faster. WORDS.CR is a file with
+197138 lines ending in '\r'.
+
+#+begin_example
+> time sed -e 's/\r//g' < WORDS.CR > /dev/null
+
+real 0m0.087s
+user 0m0.080s
+sys 0m0.008s
+
+> time tr -d '\r' < WORDS.CR > /dev/null
+
+real 0m0.003s
+user 0m0.004s
+sys 0m0.000s
+#+end_example
+
+** Filenames and Pathnames in Shell: How to do it Correctly
+
+Excellent article sur toutes les façons correctes et incorrectes d'écrire des
+bouts de shell :
+
+https://www.dwheeler.com/essays/filenames-in-shell.html
+
+** Time command
+
+See also gnomon
+and params for time!
+https://stackoverflow.com/questions/1656425/print-execution-time-of-a-shell-command
++ difference between time and /usr/bin/time (not on Cygwin or to be installed
+  as extra?)
+
+** How to check if a command is available
+
+#+begin_src shell
+if ! command -v docopts > /dev/null 2>&1; then
+    printf >&2 "Error: 'docopts' command not found.\n"
+    exit 2
+fi
+#+end_src
+
+See also [[https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script][How can I check if a program exists from a Bash script?]]
+
+** LC_CTYPE, LANG, etc.
+
+Ont l'air équivalents :
+
+- LC_CTYPE=C.ISO-8859-1
+- LC_CTYPE=en_US.ISO-8859-1
+- LANG=C.ISO-8859-1
+- LANG=en_US.ISO-8859-1
+
+Donc, le primordial à changer semble être le "charset".
+
+Toutefois,
+
+cat test.sh
+
+où test.sh contient la seule ligne "echo élève" marche, mais :
+
+test.sh
+
+ne marche pas toujours...
+
+Vérifier que :
+
+- la fonte du terminal est bien Lucida (plutôt que raster)
+- le terminal mintty est dans le bon charset par rapport au fichier à afficher
+
+Si l'exécution du fichier test.sh ne marche toujours pas, essayer de mettre
+"set LANG=C.ISO-8859-1" dans le fichier batch qui appelle (le script) Bash, ou en
+global dans Windows...
+
+Pour un affichage correct (du sujet Blat, par exemple) dans une fenêtre Command
+Prompt, lancer "chcp.com 28591" pour un affichage des accents en ISO Latin 1.
+
+*** Solution Forem
+
+Remplacer
+
+: LANG=C
+
+par
+
+: LC_ALL=C
+
+#+begin_note
+Mettre ~LC_ALL=fr_FR~ marche aussi, mais renvoie les messages d'erreur en français.
+#+end_note
+
+* Cygwin
+
+** Using the Node Package Manager (npm) with Cygwin
+
+Case is that if you have tried installing NodeJS and tried running it under
+Cygwin you have gotten something like this:
+
+: /cygdrive/c/Dev/nodejs/npm: line 2: $'r': command not found
+: /cygdrive/c/Dev/nodejs/npm: line 4: $'r': command not found
+: /cygdrive/c/Dev/nodejs/npm: line 5: syntax error near unexpected token `$'inr''
+: 'cygdrive/c/Dev/nodejs/npm: line 5: `case `uname` in
+
+This is due to the Cygwin environment expecting Unix line feeds, whereas Windows
+(and the Node version compiled for it) are expecting Windows style line
+feeds. The trick here to using Node is simply to create an alias for it, making
+it run using the normal CMD shell. The fix is as easy as putthing this in your
+$HOME/.bashrc file:
+
+: alias npm="cmd /c npm"
+
+Now, you can npm install all you want!
+
+* Windows Subsystem for Linux (WSL)
+
+** Install Kali
+
+: lxrun /setdefaultuser root
+
+: sudo apt update
+
+: sudo apt-get upgrade
+: sudo apt-get dist-upgrade
+
+#+begin_note
+The apt command is meant to be pleasant for end users.
+#+end_note
+
+: sudo apt install man
+: sudo apt install info
+: sudo apt install git
+: sudo apt install emacs
+: sudo apt install ledger
+
+: echo 'export DISPLAY=:0.0' >> ~/.profile
+: source ~/.profile
+
+: sudo apt install wireshark
+
+then metasploit-framework or empire
+
+https://www.youtube.com/watch?v=T8Xsi0Dne8o
+to add Windows Defender Exclusion
+
+Utiliser RDP pour l'interface graphique !
+https://homputersecurity.com/2018/07/07/kali-linux-sur-windows-10/
+
+Everything summed up in:
+https://www.kali.org/news/kali-linux-in-the-windows-app-store/
+
+Resources:
+The year of Linux on the (Windows) Desktop - WSL Tips and Tricks
+https://www.hanselman.com/blog/TheYearOfLinuxOnTheWindowsDesktopWSLTipsAndTricks.aspx
+
+A detailed WSL customization
+https://medium.com/@junseopark/a-detailed-wsl-customization-guide-2ab19e5ca4db
+
+** Using Emacs on Windows with WSL2
+
+https://emacsredux.com/blog/2020/09/23/using-emacs-on-windows-with-wsl2/
+
+** The year of Linux on the Windows Desktop - WSL Tips and Tricks
+
+- https://www.hanselman.com/blog/TheYearOfLinuxOnTheWindowsDesktopWSLTipsAndTricks.aspx
+- https://devblogs.microsoft.com/commandline/chmod-chown-wsl-improvements/
+- https://zzz.buzz/2016/10/09/notes-on-bash-on-ubuntu-on-windows-windows-subsystem-for-linux/
+
+** Install Bash on Ubuntu on Windows (WSL, Windows Subsystem for Linux)
+
+Follow https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#Install-using-lxrun-Anniversary-Update-and-Creators-Update:
+1. Install the Windows Subsystem for Linux
+2. Turn on Developer Mode
+3. Launch Bash (create user fni / password fni)
+
+https://stackoverflow.com/questions/38802362/windows-10-wsl-with-fedora/38802363#38802363
+
+*** Reinstall some unconfigured packages
+
+sudo apt-get upgrade
+
+Using 'apt-get -f install' and/or 'dpkg --configure --pending' are what you
+should do. If your problems persist, try to read and understand the .postinst
+script for the problematic package and check for bugs reported against that
+packge. Failing that, ask for help and/or report a bug.
+
+sudo apt-get --reinstall install some-package
+
+*** Install Emacs snapshot
+
+Install the snapshot using the following commands:
+
+#+begin_src shell
+sudo add-apt-repository ppa:ubuntu-elisp/ppa
+sudo apt-get update
+sudo apt-get install emacs-snapshot
+#+end_src
+
+Then run
+
+#+begin_src shell
+sudo update-alternatives --config emacs
+#+end_src
+
+and select emacs-snapshot
+
+Make sure you set the DISPLAY
+
+#+begin_src shell
+export DISPLAY=localhost:0.0
+#+end_src
+
+*Run MobaXTerm* (you don't need anything to do in it, just start it -- it will
+start X Server when needed.)
+
+Run Emacs in Bash and enjoy.
+
+https://stackoverflow.com/questions/39182483/how-to-use-x-windows-with-emacs-on-windows-10-bash
+
+*** DONE Install .dotfiles
+
+=~/org/theme-bigblow.setup=
+
+*** DONE Install fonts
+
+**** Ubuntu Mono
+
+https://morgansimonsen.com/2016/08/08/fun-with-bash-on-ubuntu-on-windows/
+
+**** Consolas
+
+mkdir ~/.fonts/truetype/consolas/
+cp *.ttf
+sudo fc-cache -fv
+
+*** Add directories to locate
+
+https://unix.stackexchange.com/questions/151700/how-to-add-specific-directories-to-updatedb-locate-search-path
+(for mlocate)
+
+#+begin_src shell
+sudo updatedb --database-root /mnt/d/
+#+end_src
+
+For automatic updates, see
+https://askubuntu.com/questions/857140/how-to-use-windows-task-scheduler-to-run-updatedb
+
+** WSL 2 is now available in Windows Insiders
+
+https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/
+
+** Install docopts on WSL (obviate typing the filename extension for Windows executables)
+
+My recommendation is to install docopts in WSL rather than attempting to use the
+Cygwin docopts.exe version. That will
+
+a) allow you to use the same config (without an .exe extension) in both, and
+b) likely be more compatible.
+
+I've noticed and heard of a few idiosyncrasies when attempting to use Cygwin
+executables inside of WSL. WSL does a great job of providing the compatibility
+layer between Linux and Windows EXE, but Cygwin does some "magic" that might
+cause issues.
+
+This is indeed the right way. Worked, by following installation doc on
+http://github.com/docopt/docopts
+
+* Linux
+
+** Display Manager, Window System, Window Manager and Desktop Environment
+
+https://dev.to/l04db4l4nc3r/the-linux-desktop-deep-dive-1jh3
+
+* Command-line
+
+** [#A] The art of command line
+
+Lots of good reminders and tools to use:
+https://github.com/emacsist/the-art-of-command-line
+
+** LS_COLORS
+
+To view the non-extension related rules of LS_COLORS:
+
+: echo "$LS_COLORS" | sed 's/:/\n/g' | grep -v '\*.'
+
+To quickly fix the problem, (make other-writable files yellow on nobg):
+
+: LS_COLORS+=':ow=01;33'
+
+or
+
+: LS_COLORS="ow=01;94:di=01;94" export LS_COLORS
+
+Replace 33 by 34 for blue on nobg. Even simpler, to make it nofg on nobg:
+
+: LS_COLORS+=:ow=
+
+To make your change permanent, append it to your .profile:
+
+: echo "export LS_COLORS+=':ow=01;33'" >> ~/.profile
+
+** grep: highlighting matches in color
+
+For multiple patterns with one grep, use ~grep -E~ (grep with extended regular
+expressions) with syntax like this:
+
+: grep -E "(pattern1|pattern2|...)" somefile
+
+You would rewrite your example above like this (only changes the last grep to
+grep -E):
+
+: find . -iname "*.html" -exec grep --color=auto -HinE "word1" {} \; | grep --color=auto -E "(word1|word2)"
+
+If you wanted lines with _either_ word in it, change the first grep and omit the
+second:
+
+: find . -iname "*.html" -exec grep --color=auto -HinE "(word1|word2)" {} \;
+
+The highlighting for matched text is all in one color, though see the man page
+for more stuff you can do with the GREP_COLORS envvar. With it, you can set
+different colors for different contextual things, like the color for the rest of
+the line that has the match ("sl="), but isn't the matching text itself. Also,
+grep will color filenames, line-numbers, byte-offsets, etc... like when you give
+grep multiple files to search:
+
+: grep -E --color=always -i "(yes|true)" /etc/default/*
+
+I haven't tried the "cx=" option yet, which colors "context" lines, where "sl="
+colors "selected" lines. I've set the following in my .bashrc which is similar
+to the default (red for matches), but makes the rest of the line yellow:
+
+: export GREP_COLORS="ms=01;31:mc=01;31:sl=01;33:cx=:fn=35:ln=32:bn=3 2:se=36"
+
+* To sort out
+
+** Make a README
+
+https://www.makeareadme.com/
+https://www.mkdocs.org/
+https://gist.github.com/eddieantonio/55752dd76a003fefb562
+https://github.com/tj/git-extras/blob/master/man/man-template.md
+https://github.com/othneildrew/Best-README-Template
+https://doc.nuxeo.com/corg/readme-template/
+
+** Leiningen project tree
+
+The following command:
+
+#+begin_src shell
+lein new ex1
+#+end_src
+
+produces a tree that looks like this:
+
+#+begin_src shell
+ex1
+ex1/.gitignore
+ex1/doc
+ex1/doc/intro.md
+ex1/project.clj
+ex1/README.md
+ex1/resources
+ex1/src
+ex1/src/ex1
+ex1/src/ex1/core.clj
+ex1/test
+ex1/test/ex1
+ex1/test/ex1/core_test.clj
+#+end_src
+
+** Organiser les fichiers de CSS
+
+For how to organize CSS files, see:
+- http://www.slideshare.net/lachlanhardy/beautiful-maintainable-css
+- http://www.slideshare.net/stephenhay/maintainable-css-presentation
+- http://www.slideshare.net/maxdesign/efficient-maintainable-css-presentation
+
+** Notes sur Bash, AVR, réseau, sons, vidéo et images, ...
+
+http://www.1010.co.uk/org/HOWTO.html
+
+** Examples of output generated by doxygen
+
+http://www.stack.nl/~dimitri/doxygen/results.html
+
+** Configuration DNS avec OpenVPN                                         :mail:
+[2013-05-10 Fri 13:00]
+
+#+begin_verse
+> It improved when I added manually some DNS suffix to my connection
+> settings (well, at least now Skype is working both with and without
+> VPN). But I can't access their internal servers (including the
+> proxy) with the VPN on. Having a local DNS service may help, thanks
+> for the tip.
+
+If you do this I strongly suggest _not_ to use dnsmasq or something like it.
+It's just a bit too whimpy.  BIND is not as difficult as people think to
+use, my recipe goes something like:
+
+In named.conf:
+
+    there's a forwarders { } stanza somewhere, put the DNS servers of your
+    local network or internet connection here.
+
+In a new zone:
+
+    Configure a zone for each domain that might be on a VPN or otherwise
+    'weird'  for example I have missioncriticalit.com as one of these, I can
+    set this zone up as a forwarding zone and specify the master DNS server,
+    this is the DNS server in .be that I can reach over the VPN.
+
+This means that any lookups for missioncriticalit.com go to the server in
+belgium, and lookups for any other adress go to my nearest local DNS server,
+in my case my ISP's server.
+
+The only catch is that if the VPN is down for a while and lookups to
+missioncriticalit.com fail, then after restarting the VPN I have to restart
+BIND, because it caches the negative information.
+#+end_verse
+
+** Démarrer une alimentation ATX sans carte mère
+
+http://www.adnpc.net/articles/54-demarrer-une-alimentation-atx-sans-carte-mere/1-la-jonction-des-2-pins.html
+
+** Differences between ISQL and OSQL
+
+As observed by FNI:
+
+- TAB vs SPC column separator by default
+- EOL (or not) after last line of output -- not sure about that one...
+
+** XP programming
+
+http://www.agile-swiss.org/wiki/index.php/XP_introduction:
+Test-driven design...
+
+** GnuTLS, copyright assignment, and GNU project governance
+
+https://lwn.net/Articles/529522/
+
+** Discussion autour du code, après qu'il ait été implémenté
+
+>> I think it's a great change.
+>
+> Yes, why?  Any good reason?
+
+The obvious one: prevention of data loss. With `auto-revert-mode', for
+example.
+
+> (Sure, users can add back code themselves to empty the undo list and get
+> back the former behavior...)
+
+Indeed, they can. The reverse has been impossible, until now.
+
+> There might well be someone out there who, "personally" or not (?), has
+> (another) good argument for keeping things the way they were - at least as
+> an option. Who knows? As Richard often says (especially for changes to
+> basic, longstanding behavior), why not poll the users?
+
+They should be able to speak up now, or during the pretest. Nothing is really
+set in stone, when it comes to code.
+
+> Don't you wonder that this came up now seemingly for the first time? Do you
+> think that no one has thought before about whether the undo list should be
+> kept or dropped when reverting? A bit presumptuous, no?
+
+Obviously not. The opened bug is a couple of years old now.
+
+> Think about it a bit more. Open it for discussion on emacs-devel. Why act so
+> precipitously? Is that "personally" necessary?
+
+We're having this discussion now, and instead of giving actual reasons you're
+speaking of hypothetical users.
+
+Talking about personal needs and requirements is good, because every person is
+usually competent about those.
+
+But the way you often assume the you know the userbase better than everyone
+else is tiresome, to be honest.
+
+** The Six Dumbest Ideas in Computer Security
+
+http://ranum.com/security/computer_security/editorials/dumb/index.html
+
+** Nice web site with code, and notes
+
+http://docs.astropy.org/en/latest/development/codeguide_emacs.html#no-tabs
+
+** GitHub HTML Preview
+
+CSS
+
+http://htmlpreview.github.io/
+
+** Reduce the time it takes to load a Web page
+
+- Compressing javascript files helps in reducing the time taken by browsers to
+  download the files. We compared a variety of tools like yui and jsmin to
+  minify the size of our javascript files. We found closure compiler to be the
+  best.
+
+- Go to the [[http://engineering.slideshare.net/2013/10/10-ways-we-made-slideshare-faster/][SlideShare Engineering Blog]] for more
+
+** R good practice: add footnotes to graphics
+
+http://ryouready.wordpress.com/2009/02/17/r-good-practice-adding-footnotes-to-graphics/
+
+** How Fast Is Your Network? Five Ways To Measure Network Speed
+
+http://www.smallnetbuilder.com/lanwan/lanwan-basics/31220-how-fast-is-your-network-five-ways-to-measure-network-speed
+
+Totusoft's LAN Speed Test is the quickest and easiest way to test network
+speed. The only thing it needs besides a Windows machine to run on is a target
+network share. LST runs from memory on the computer it's running on, so won't
+be limited by hard (or solid state) drive speed. And it clears cache between
+writes and reads to ensure that the file actually gets read.
+
+** Web Performance test tool
+
+https://dev.to/swyx/every-web-performance-test-tool-naj
+
+** Elasticsearch - Logstash - Kibana
+
+Every sysadmin or anyone who is in the position to get the call when a system
+or application fails, will share the frustration of having to dig through huge
+amounts of log and event data to figure out what went wrong. Typically this
+involves logging into remote machines, grepping through log files to identify
+what went wrong, where it originated, etc. This can be a cumbersome task and
+not something for the faint of heart.
+
+Meet Elasticsearch, Logstash and Kibana! The combination of these tools provide
+an open source alternative to commercial log analysis tools like Splunk and are
+rapidly growing in popularity.
+
+** Alertes Google
+
+Recevez des alertes lorsque du contenu susceptible de vous intéresser est
+publié sur le Web
+
+https://www.google.fr/alerts?hl=fr
+
+** Top desing resources for non-designers
+
+- Creattica
+- Design Taxi
+- 99U
+- Designinspiration
+- AE TUTS
+- Abduzeedo
+- Fuck Yeah, Book Arts!
+- Hi-Fructose
+- AWH
+- Dribble
+
+** Number of f in the text + the invisible gorilla (The Secret Art of Debugging)
+
+https://dev.to/dotnet/the-secret-art-of-debugging-1lfi
+
+** A/B Testing with CloudBees Rollout and Google Analytics
+
+https://dev.to/cloudbees/a-b-testing-with-cloudbees-rollout-and-google-analytics-part-i-6f3
+
+** Open Source Race to Zero May Destroy Software Industry
+
+Sun Microsystems is struggling, to say the least, and the reality is that they
+are always going to struggle because they are an open source company, which
+means that the only thing they can sell is service. Whenever you sell time,
+earning potential is limited. There are only so many hours in the day, and only
+so much you can charge by the hour. When you have a product that can be
+replicated, whether it be a device, a piece of proprietary software or
+whatever, you have the ability to leverage, which simply doesn't exist when you
+are selling yourself by the hour. So there is a realistic ceiling on the
+revenue that can be earned by any open source company, and that ceiling is much
+lower than any proprietary software company.
+
+* Regular expressions
+
+** Regexp simplifier - simplify regular expressions
+
+http://ivanzuzak.info/noam/webapps/regex_simplifier/
+
+* JS
+
+** JS Obfuscator
+
+https://www.programmableweb.com/news/new-javascript-obfuscator-claims-to-be-hardest-to-deobfuscate/2015/01/23
+
+https://www.obfuscator.io/#:~:text=%20There%20are%20numerous%20reasons%20why%20it%27s%20a,for%20yet.%20You%20can%20show%20your...%20More%20
+
+** JS Beautifier
+
+http://www.js-beautify.com/
+
+** Chrome Dev Tools
+
+- https://www.youtube.com/watch?v=BaneWEqNcpE
+- [[https://www.youtube.com/watch?v=2zmUSoVMyRU][15 tricks to master Chrome Developer Tools Console]]
+
+Break on subtree modifications.
+
+Break on uncaught exception.
+
+* Coding style
+
+You should try to prevent writing lines longer than 80 characters rather than
+breaking them:
+
+Try to minimize indentation by converting conditions and encapsulating code.
+
+Linus Torvalds: If you need more than 3 levels of indentation, you're screwed
+anyway, and should fix your program.
+
+This also has the side effect of making you code much more readable, besides
+that the conditions are the other things you encapsulate are ready to be used
+elsewhere.
+
+#+begin_src cpp
+bool encapsulatedLongCondition() // Add some parameters
+{
+  if (!condition1)
+    return false;
+
+  if (!condition2)
+    return false;
+
+  // ... (Other conditions)
+
+  return true;
+}
+
+if (encapsulatedLongCondition())
+{
+  // ... (Call some methods, try not to introduce deeper if/loop levels!)
+}
+#+end_src
+
+Simplifying your condition through boolean algebra and trying to invert the condition and return value can help a lot. :-)
+See also:
+http://stackoverflow.com/questions/380885/can-you-simplify-this-algorithm/381034#381034
+See also 2: Refactor for C# has the ability to assist you with this. ;-)
+
+* Fontes
+
+** Recherche de typo existante (fontes gratuites)
+
+- http://www.dafont.com/
+
+- Google fonts. If you haven't yet, make sure to download Google Font
+  (https://github.com/google/fonts/)
+
+* Images
+
+** Illusions d'optique (robe bleue et noire ou blanche et dorée)
+
+- *Bleue et noire, ou blanche et dorée ?*
+  http://tempsreel.nouvelobs.com/vu-sur-le-web/20150227.OBS3503/cette-robe-est-elle-bleue-et-noire-ou-blanche-et-doree.html
+
+- http://www.msn.com/en-us/video/wonder/5-optical-illusions-that-will-make-you-question-everything/vi-AA9v0SD
+
+** Sourire avec les yeux (sur une photo)
+
+Pour prendre une photo avec un vrai sourire (dit, de Duchenne, du nom d'un
+neurologue), il faut prononcer le mot "cheeks" (le "k" est important)...
+
+Sourire avec muscle occulaire également...
+
+** The "squinch" is the secret to perfect pictures
+
+It can make you look good in every photo.
+
+** Icons
+
+The Noun Project (https://thenounproject.com/) has an amazing collection of
+icons to use for your deck.
+
+** Free images
+
+- https://unsplash.com/
+- https://www.pexels.com/
+- https://pixabay.com/fr/
+- Stock photography. The Stocks (https://thestocks.im/) is a collection of
+  royalty-free stock photography to implement in your deck.
+
+** Image vectorization
+
+Il me semble plus simple de recréer le logo à la main. Sinon, le summum de la
+vectorisation, c'est ici:
+
+- http://research.microsoft.com/pubs/69442/imagevectorization_siggraph07.pdf
+- http://research.microsoft.com/en-us/um/people/jiansun/videos/GMesh_336.wmv
+
+Je ne sais pas si c'est disponible quelque part.
+
+From [[http://groups.google.com/groups/search?as_umsgid%3D7bcb29f0-f39a-4019-962e-f69c3c8407bd%40t13g2000yqm.googlegroups.com][Email from pluton: Re: Tikz et définition des ang]]
+
+** Recherche d'éléments existants de graphisme (icônes, icons)
+
+- http://www.dribbble.com/
+- http://www.uiparade.com/
+- http://www.thenounproject.com/ (recherche facile)
+
+Éventuellement, rendre ces dessins « pixellisés » exploitables via
+vectorisation dynamique :
+
+- Adobe Illustrator
+
+*** Nice images to insert in presentations
+
+- [[https://www.google.com/search?q=Quality+control+approved&tbm=isch][Quality control - approved]]
+- Business as Usual = Dead End
+
+** Logo builder
+
+ShapeFactory is a set of design tools built by designers, for everyone. An
+invaluable part of anyones toolkit.
+
+https://www.shapefactory.co/
+
+** Color Blender (Eric Meyer)
+
+https://meyerweb.com/eric/tools/color-blend/
+
+** Choisir un univers de couleurs
+
+- http://kuler.adobe.com/
+
+** How to blur photos
+
+- Go to http://www.drpic.com
+- Choose "Gaussian Blur"
+- Adjust blur radius to 3px
+
+** Additive RGB + substractive CMYK
+
+http://www.math.harvard.edu/computing/latex/color.html
+
+** Compare images with ImageMagick
+
+Use ImageMagick to generate a visual diff between two images:
+
+#+begin_src shell
+convert p1090152.jpg p1090153.jpg -compose difference -composite diff_output.jpg
+#+end_src
+
+** Royalty Free Stock Photography (images)
+
+- http://www.istockphoto.com/
+- http://www.inmagine.com/
+
+Free images:
+- http://www.sxc.hu/
+- http://www.photl.com/
+- http://www.morguefile.com/
+
+- http://www.stockfreeimages.com
+
+et aussi :
+http://www.dazzlindonna.com/blog/life/nice-photos/favorite-10-free-stock-photo-download-sites/
+
+En voici un autre:
+http://www.shutterstock.com/
+
+** Color splash (selective colorization) online
+
+Convert an image to black and white while keeping a selected portion in color.
+
+http://www.fotor.com/features/color-splash.html
+
+(and much more: mosaic, blur, etc.)
+
+** How do you make animated GIFs?
+
+- LICEcap is one tool that does it.
+- Byzanz-record: http://askubuntu.com/a/123515/13847
+
+* Minimum noticeable latency: 0.17 s
+
+As you say, context matters a lot.  The 0.17sec ergonomic latency threshold is
+specific to human-computer interfaces; it was discovered by Jef Raskin during
+the early design studies that led to the Macintosh interface, and has been
+experimentally confirmed pretty solidly.
+
+I'm a musician too, and music does indeed have time granularity finer than the
+reflex-arc time.  This is possible (as is speed typing and pitching baseballs)
+because humans have the ability to compose action sequences with finer time
+granularity and ship them to a limb for execution.  In effect, we do
+downloadable motion subroutines.
+
+(By the way, other animals - even higher primates - are not very good at this.
+There is an interesting and plausible theory that the ability developed in early
+hominids as an adaptation for throwing rocks at small game, well before we
+became tool-using cursorial hunters of large game. And that the same
+action-buffering circuitry was later recruited for pattern recognition in
+language, music, and mathematics - getting good at throwing, in effect,
+pre-adapted us for abstract intelligence.)
+
+Music fools us. The ear can hear with finer time resolution than
+spinal-reflex-arc time, so we think musical patterns like 1/32 drumbeats are
+being generated by an action/reaction process that loops faster than humans are
+actually capable of.  In reality, a skilled musician is not controlling every
+motion through an action/reaction loop - he or she is shipping those precomposed
+sequences.
+
+What humans cannot do is take sensory input, process, and then *react* faster than
+spinal-reflex-arc time!  Raskin's basic discovery was that if you throw a mockup
+of your application start controls on the display, you have a minimum of 0.17
+seconds to finish initializing the real controls before a human is capable of
+noticing and then trying to do something.
+
+* Video
+
+** If a picture is worth a thousand words, imagine what a video is worth
+
+http://www.quicksprout.com/2013/11/27/if-a-picture-says-1000-words-than-video-is-priceless/
+
+** Séquence HD
+
+Voir cette séquence en HD : étonnant !
+
+http://www.youtube.com/watch?v=0vrdgDdPApQ
+
+Another nice video: http://vimeo.com/32958521
+
+** ActivePresenter Video editor, film making
+
+Pour faire des vidéos, avec possibilité de voir la souris, de voir un rond
+autour, d'éditer image par image, etc.
+
+** Screen capture
+
+- Captura (from Michaël)
+
+** Convert video
+
+*** Video converter
+
+[[http://www.any-video-converter.com/products/for_video_free/][Any Video Converter]] <<<
+
+*** Convert FLV to MP4 (Jing video compatible)
+
+Use ~ffmpeg~ to convert an FLV video (e.g., from Jing) to MP4 format:
+
+#+begin_src shell
+ffmpeg -i input.flv -ar 22050 output.mp4
+#+end_src
+
+Tested successfully with a video recorded using Jing. Alternatively, iWisoft
+Video Converter can also be used.
+
+** Online video/audio converter (for Youtube)
+
+https://www.onlinevideoconverter.com/video-converter
+
+** Raccourcis sur YouTube (shortcuts, key bindings)
+
+Ces raccourcis fonctionnent quand vous ouvrez une nouvelle vidéo : pressez la
+lettre
+
+- ~J~ pour revenir dix secondes en arrière,
+- ~L~ pour faire un bond en avant de dix secondes,
+- ~K~ pour démarrer ou marquer une pause et
+- ~M~ pour réduire le son.
+
+Et si vous avez cliqué déjà quelque part dans le lecteur vidéo (démarrage,
+pause, volume,...), les raccourcis suivants fonctionneront aussi :
+
+- flèche vers la gauche/droite pour revenir 5 secondes en arrière,
+- flèche vers le haut/bas pour augmenter ou réduire le volume,
+- les chiffres 1 - 9 pour sauter respectivement de 10 à 90% d'une vidéo,
+- le bouton ~Home~ pour revenir au début de la vidéo,
+- le bouton ~End~ pour aller à la fin,
+- ~F~ pour le mode plein écran, et
+- ~Esc~ pour en sortir.
+
+** Video editing and publishing
+
+Uploadable video formats on Vimeo:
+- avi (compress them!)
+- mov
+- wmv (broadband) = best quality/size
+- mp4 = H.264
+but *no* flv!
+
+For audio, use AAC or "lossless" codec.
+
+Refer to the [[http://vimeo.com/help/compression][Vimeo Compression Guidelines]] and the "Exporting for Upload to
+Vimeo" tutorials in the right sidebar (under exporting/compression).
+
+Example ~ffmpeg~ commands for compressing videos without audio:
+
+#+begin_src shell
+ffmpeg -i DSCN1001.MOV -b:v 2000k -an full.mp4
+ffmpeg -i DSCN1002.MOV -b:v 2000k -an zoom.mp4
+#+end_src
+
+- http://www.missioncriticalit.com/demo/android/full.mp4 (30 MB)
+- http://www.missioncriticalit.com/demo/android/zoom.mp4 (3 MB)
+
+http://www.techiezine.com/windows-video-cutter-software/
+
+Voir
+- http://www.miracletutorials.com/vimeo-the-secret-of-good-quality/
+
+Install [[http://www.filehippo.com/download_quicktime_alternative/2615/][QuickTime Alternative 1.81]].
+
+*** Vimeo vs YouTube
+
+Vimeo uses a higher bit rate than YouTube, which results in visibly better
+video.
+
+One more important difference: Vimeo keeps the user-submitted video in its
+original format and users can choose to make the originals available for
+download by publishing links to them. That's an option not available at
+YouTube.
+
+*** YouTube
+
+If you're interested in improving the quality of future videos, read the tips
+on video settings and formats and HQ (high quality) videos in our Help Center:
+
+- [[http://www.google.com/support/youtube/bin/answer.py?answer=132460&hl=en_US&msrcid=fupldvs][Video Settings]]
+- [[http://www.google.com/support/youtube/bin/answer.py?answer=55744&hl=en_US&msrcid=fupldhq][High Quality]]
+
+** Video editing with Adobe Premiere
+
+- [[http://www.youtube.com/watch?v=1bMgGHS0rp8][Ken Burns Effect with Sliding Transitions - Adobe Premiere Pro CS6 Tutorial]]
+  + Copier/coller des transformations (Ken Burns, p.ex.) d'une photo à une
+    autre
+  + Jouer sur la taille ou la position en réglant les paramètres avec la
+    souris (plutôt que d'encoder les valeurs à la main)
+
+- [[http://www.youtube.com/watch?v=uzmfioI3BqM][Film Burns in Premiere Pro CS6]]
+
+  See Film Burns, Color flares, Light Leaks...
+
+- [[http://www.youtube.com/watch?v=Rb_fY8m0-G4][Faire part mariage DVD musique Amelie Poulain]]
+
+*** Comparison of video editing software
+[2010-09-24 Fri 21:10]
+
+| Professional      | 0.5 | Kdenlive  | Linux/Mac | Open Source Community | 2002 | 2010 |  0.7.8 | Free | GPL  |
+| Professional      |   2 | Cinelerra | Linux/Mac | Heroine Virtual       | 2002 | 2009 |    4.2 | Free | GPL  |
+| Prosumer          |   1 | OpenShot  | Linux     | Open Source Community | 2008 | 2010 |  1.1.3 | Free | GPL  |
+| Consumer          | 3.5 | LiVES     | Linux/Mac | Open Source Community | 2002 | 2010 |  1.3.2 | Free | GPL  |
+| Consumer/Prosumer | 4.5 | PiTiVi    | Linux     | Open Source Community | 2004 | 2010 | 0.13.4 | Free | LGPL |
+
+- Kdenlive vs OpenShot
+  + supérieur, plus professionnel que OpenShot : moniteur de preview et
+    moniteur final
+  + ressemble plus aux programmes d'édition propriétaires
+  + évolution plus rapide
+
+- Kdenlive
+  + easy to use and very powerful
+  + also in the repositories
+  + *remember when you are rendering the file to choose "lossless" instead of
+    "File Rendering" for your output*
+
+- Once the video is done I Use *DeVeDe* to burn an iso and drop it on DVD.
+  DeVeDe is also in the repositories.
+
+- kdenlive is also pretty powerful, and much easier to use than cinelerra
+
+- Cinelerra not very stable
+
+http://kdenlive.org/tutorial/
+
+**** Ken Burns effect
+
+***** Composite transition
+
+You can utilize the Composite transition to get a Ken-Burns style effect.
+Keyframeable zoom, pan and opacity is available.
+
+But your milage will vary due to a nasty downside:
+Interpolation between keyframes is linear (no splines!)
+Consequently, multi-keyframe motion is pretty jerky and the overall result
+poor, sometimes unacceptable.
+
+This is one of the key issue causing me switching between cinelerra and
+kdenlive on a project by project base.
+
+***** Video panorama
+
+is this what you are talking about?
+
+http://kdenlive.org/tutorial/kdenlive-creating-video-panorama
+
+***** Ken Burns effect in 0.7.5
+
+Yes. Works well in 0.7.5.
+
+You just have to keep in mind to *select "black" for the second track* to get
+it work. The default "Auto" didn't work for me (there's no second track to
+overlay).
+
+From [[http://kdenlive.org/forum/slide-shows-ken-burns-effect-and-other-linear-transform][Slide shows with Ken Burns effect and other linear transform | Kdenlive]]
+
+***** Ken Burns effect in 0.7.8
+
+Animation adds preset slow smooth pan and zoom effects also known as the Ken
+Burns Effect. The choices are rather limited due to this late feature
+addition, but you can choose no animation, pans only, zooms only, or a
+combination of pans and zooms. Each option also has a low pass filter to
+reduce the noise in the images that may occur during this operation. Low pass
+filtering is much slower, so you should preview without it, and then enable it
+to render.
+
+From [[http://kdenlive.org/users/ddennedy/slideshow-improvements-coming-version-078][Slideshow improvements coming in version 0.7.8 | Kdenlive]]
+
+* Raspberry
+
+** Raspberry Pi Projects 2020
+
+https://www.youtube.com/watch?v=ZDfhcA0SCiM
+
+** Un mini-ordinateur qui décrypte les serrures à combinaisons chiffrées en quelques secondes
+
+Une serrure à code chiffré peut être 'craquée' en quelques minutes, parfois même
+en trente secondes seulement. Avec quoi ? Un Arduino, un moteur précis, un
+module imprimé en 3D et un petit outil pour identifier rapidement les
+combinaisons possibles.
+
+https://www.youtube.com/watch?v=YcpSvHpbHQ4
+
+https://www.youtube.com/watch?v=09UgmwtL12c
+
+https://www.youtube.com/watch?v=qkolWO6pAL8
+
+* Security
+
+** SSL Checker
+
+This SSL Checker will help you diagnose problems with your SSL certificate
+installation. You can verify the SSL certificate on your web server to make sure
+it is correctly installed, valid, trusted and doesn't give any errors to any of
+your users. To use the SSL Checker, simply enter your server's hostname (must be
+public) in the box below and click the Check SSL button. If you need an SSL
+certificate, check out the SSL Wizard.
+
+https://www.sslshopper.com/ssl-checker.html#hostname=webftp.aremis.com
+
+** Comment fait-on pour transformer son adresse email .com en .edu
+
+fni%missioncriticalit.com@cet.edu
+
+http://blog.laptopmag.com/how-to-get-an-edu-email-address
+
+** Using Kon-Boot from a USB Flash Drive: Bypass those pesky Windows and Linux login passwords completely
+
+** Network/data forensics
+
+#+begin_src shell
+kismet -c wlan0
+tcpdump -s 0 -A
+    tcpreplay and driftnet
+    airdecap-ng Kismet-Sep-25-2009-12.pcapdump
+    tcpreplay -t -i lo Kismet-Sep-25-2009-12.pcapdump-dec
+    driftnet -i lo
+    raw sniff in scapy
+    pkts = sniff(prn=lambda x:sys.stdout.write(str(x)))
+    tcpdump -s 0 -w - | devdisplay 240 100 1 // raw packets
+    tcpdump -s 0 -w - | tee pipe > /dev/dsp & ; cat pipe | devdisplay 240 240 2
+#+end_src
+
+** 10 crazy IT security tricks that actually work
+
+http://www.infoworld.com/d/security/10-crazy-it-security-tricks-actually-work-196864?source=footer
+
+1. Renaming admins
+2. Getting rid of admins
+3. Honeypots
+4. Using nondefault ports
+5. Installing to custom directories
+6. Tarpits
+7. Network traffic flow analysis
+8. Screensavers
+9. Disabling Internet browsing on servers
+10. Security-minded development
+
+** Wireless packet injection
+
+http://airpwn.sourceforge.net/Airpwn.html
+
+** Concrete security risks
+
+All I said was that I want to hear about real-life experiences with
+these dangers, where the attackers were able to exploit the Emacs text
+decoding machinery to their advantage.  I know it's probably possible
+to concoct a synthetic use case for that (although even that was not
+done in this thread), but I want to see _real-life_ stories.  Then we
+will have specific scenarios to talk about, rather than general
+unnamed risks, and also won't need to argue about whether "this can
+happen".
+
+Historically, any real-life risks that were reported on the Emacs
+lists were handled and fixed very quickly and without any discussions
+as to whether they should be fixed.  Rest assured that the same will
+happen with the kinds of risks discussed here -- if and when someone
+shows us a real-life use case where these risks materialize on our
+watch.
+
+We arrived at the current modus operandi of Emacs wrt text encoding
+and decoding through sweat, blood, and tears of several major
+releases.  It is neither an incident nor luck that complaints about
+these issues are rarely if at all seen on the user support forums or
+here, for the past 2 major releases.  Changing that in response to
+considerations not backed up by specific user reports would be a grave
+mistake.  If the history of Emacs development since v20.1 in this area
+teaches us anything, it is that we, the Emacs developers, are not good
+enough in making these decisions based on theoretical arguments and
+considerations.  Suit yourself, but I, for one, don't want us to make
+that mistake again, ever.
+
+** GPG
+
+One more useful note: As a developer I find it annoying to have to enter my
+passphrase with every commit (every 30 minutes actually), I did a bit of digging
+and it seemed quite hard to have the prompt only once per session (after
+restart) but I found what seemed like a nice compromise.
+
+Here are the steps I took:
+
+1. From git-bash add this content to : vi ~/.gnupg/gpg-agent.conf
+
+   : default-cache-ttl 172800
+   : max-cache-ttl 31536000
+
+   This basically means, whenever a signing request is issued, the passphrase is
+   cashed for 2 more days, with a maximum lifetime of 1 year (given that you
+   didn't restart your machine)
+
+2. Log off / login again (well if you are an impatient person like me, you might
+   get away by just restarting gpg-agent (ps can give the id of the process and
+   kill -9 <pid> would kill it.)
+
+3. To test that this is working I went ahead and created a test repo and made
+   a few manipulations... I will let the code speak for itself:
+
+   : REGAIYO@CIS2001495 MINGW64 ~
+   : $ cd /c/tmp/
+   :
+   : REGAIYO@CIS2001495 MINGW64 /c/tmp
+   : $ mkdir git-test
+   :
+   : REGAIYO@CIS2001495 MINGW64 /c/tmp
+   : $ cd git-test/
+   :
+   : REGAIYO@CIS2001495 MINGW64 /c/tmp/git-test
+   : $ git init
+   : Initialized empty Git repository in C:/tmp/git-test/.git/
+   :
+   : REGAIYO@CIS2001495 MINGW64 /c/tmp/git-test (master)
+   : $ touch test-file && git add test-file && git commit -m "Testing gpg-passphrase expiration"
+
+   I got the prompt for my passphrase, so I entered the passphrase and the commit succeeded
+
+4. I waited a few minutes and then tried again in the same tab:
+
+   : REGAIYO@CIS2001495 MINGW64 /c/tmp/git-test (master)
+   : $ touch test-file2 && git add test-file2 && git commit -m "Testing gpg-passphrase expiration 2"
+   : [master a596070] Testing gpg-passphrase expiration 2
+   :  1 file changed, 0 insertions(+), 0 deletions(-)
+   :  create mode 100644 test-file2
+
+   No passphrase was required
+
+5. I started a new tab, and then tried again (multiple times with different wait
+   time going up to a couple of hours):
+
+   : REGAIYO@CIS2001495 MINGW64 /c/tmp/git-test (master)
+   : $ . ~/.bash_profile
+   : gpg-agent[1296]: WARNING: "--write-env-file" is an obsolete option - it has no effect
+   : gpg-agent: a gpg-agent is already running - not starting a new one
+   :  
+   : REGAIYO@CIS2001495 MINGW64 /c/tmp/git-test (master)
+   : $ touch test-file3 && git add test-file3 && git commit -m "Testing gpg-passphrase expiration 3"
+   : [master eca6dba] Testing gpg-passphrase expiration 3
+   :  1 file changed, 0 insertions(+), 0 deletions(-)
+   :  create mode 100644 test-file3
+
+   no passphrase was requested !!
+
+6. Just to confirm that all 3 commits were signed, and were few minutes away
+   from one an other I executed a pretty git log command (you can check out the
+   alias from my previous comment):
+
+   : REGAIYO@CIS2001495 MINGW64 /c/tmp/git-test (master)
+   : $ git lgs
+   : * f83bd49 - G - (3 minutes ago) Testing gpg-passphrase expiration 5 - Younes Regaieg (HEAD -> master)
+   : * 4a4f9b8 - G - (2 hours ago) Testing gpg-passphrase expiration 4 - Younes Regaieg
+   : * eca6dba - G - (2 hours ago) Testing gpg-passphrase expiration 3 - Younes Regaieg
+   : * a596070 - G - (2 hours ago) Testing gpg-passphrase expiration 2 - Younes Regaieg
+   : * 1a4cac2 - G - (2 hours ago) Testing gpg-passphrase expiration - Younes Regaieg
+
+   G here means the code is signed with a valid gpg key.
+
+(By default the passphrase expires after 30 minutes without being used)
+
+I just wanted to also report that I did not need to add anything special for
+intelliJ to perform signed commits. If you are using git-bash shipped gpg and
+you are still having issues with intelliJ commits, then you probably chose
+during the install not to include git-bash binaries in the path
+variable. re-installing with that option on can help with the issue, otherwise
+specifying gpg binary in git configuration to
+"C:\Users\regaiyo\AppData\Local\Programs\Git\usr\bin\gpg.exe" could solve the
+issue (I haven't tested, but it is an educated guess ...)
+
+* Physical security
+
+** Ouvrir un cadenas sans clé
+
+http://www.youtube.com/watch?v=yPUHjzJhg60
+
+La clé est une vraie clé, mais il a recouvert les dents de la clé avec du
+papier d'alu, et après la magie opère !
+
+http://www.youtube.com/watch?v=60WIwmqOH2Q
+
+Principe du bumping
+
+http://www.youtube.com/watch?v=Gx3G8QNKUdQ
+
+- [[http://www.youtube.com/watch?v=MNaSTipOYy8][Unlock a car door with a tennis ball]]
+
+** Ouvrir un cadenas sans code
+
+[[https://www.youtube.com/watch?v=6xwkbT5l3KA][Ouvrir un cadenas à code sans en avoir le code ^^ Open a padlock with code without the code]]
+
+** Open a lock with matches
+
+https://www.youtube.com/watch?v=AZ57EyZrwcA
+
+** Bump key to unlock most doors
+
+https://www.youtube.com/watch?v=131j0htYIoU
+
+* License
+
+** License
+
+Choosing an OSS license (MIT, Apache, GPL, Creative Commons, etc.) doesn't need
+to be scary: http://choosealicense.com/.
+
+** License
+
+> I disagree.  Licensing a tutorial with GPL is a stupid thing to do.
+> A tutorial may contain code which people naturally mimic (or even
+> copy).  Such things should definitely be in PD.
+
+As yourself pointed out in one of your emails, in many legal
+ordinations, there is no such concept as public domain: you cannot
+renounce to the copyright on your intellectual production.
+
+Therefore licensing something as public domain is not quite possible. If
+you want to grant the users of your code the most freedom (but do not
+care about this freedom being carried over to others) the 3-Clause BSD
+license http://opensource.org/licenses/BSD-3-Clause, the 2-Clause BSD
+license http://opensource.org/licenses/BSD-2-Clause, or the MIT license
+http://opensource.org/licenses/mit-license.html are good candidate
+licenses formulated in the framework of copyright law as accepted
+internationally.
+
+However, you cannot derive your work from some other work distributed
+under GPL and license it with a more permissive license (as the ones
+suggested above). What constituted a derived work is however not
+scientifically defined (and you have been rather terse in describing how
+your work build upon code released under the GPLv3). In one place you
+explicitly mention running a query-replace on the source code:
+mechanical transformations of the source code are considered derived
+works, even if the end result does not resemble at all the original.
+
+I would suggest you to do derive your work from the GPL code and then
+consult with the authors about its licensing. If you are only using the
+GPL code as a skeleton, I think they would not have objections (but you
+could also easily re-implement it from scratch).
+
+Other than this I would recommend you to refrain from harsh comments on
+a matter on which you hold strong ideas but weak knowledge (as most of
+this thread demonstrates). Especially if your positions seem detrimental
+of the Copyleft model, and you are asking for help in a mailing-list
+devoted to a very successful Copyleft program.
+
+** License
+
+> after a short discussion in a recent thread, I have a serious technical
+> question.
+>
+> Assume that (for some reason) I want to write an Org-mode exporter which
+> won't be GPL'd.  (Use-case: having written a few custom exporters, I'm
+> writing a tutorial on them, and I consider publishing a *tutorial* with
+> GPL'd code a Bad Thing™.  (The idea of a programming tutorial is that
+> other people can or even should reuse the code in the tutorial, right?
+> And I see no reason to impose GPL on them.))
+>
+> How do I do that?  Is that even possible?  Also, is it possible to get
+> an actual answer to this question without spending money on lawyers?
+
+Like I said in an earlier message just a few minutes ago, you can do it,
+but you can't use org.el or Elisp at all, unless you implement your own
+Elisp engine that you call.
+
+The GPL isn't as evil as you make it out to be: in fact, it's not evil
+at all: it only ensures that you pass on the freedom that you receive to
+others, i.e. **you are not free to remove freedom from others**.
+
+As for documentation, here I cite a bit of Elisp manual:
+
+    (a) The FSF's Back-Cover Text is: “You have the freedom to copy and
+     modify this GNU manual.  Buying copies from the FSF supports it in
+     developing GNU and promoting software freedom.”
+
+Just think about it: on 99% of published books it says:
+
+    No part of this publication may be reproduced, stored in a retrieval
+    system, or transmitted, in any form or by means electronic,
+    mechanical, photocopying, or otherwise, without prior written
+    permission of the publisher.
+
+Now who is the evil guy here?
+
+** License
+
+>> Look here:
+>> https://en.wikipedia.org/w/index.php?title=GNU_General_Public_License&section=11#Libraries
+>>
+>> Most useful quote:
+>>
+>>> The Free Software Foundation (which holds the copyright of several
+>>> notable GPL-licensed software products and of the license text itself)
+>>> asserts that an executable which uses a dynamically linked library is
+>>> indeed a derivative work. This does not however apply to separate
+>>> programs communicating with one another.
+>
+> Oleh,
+>
+> thanks for this link and excerpt.  I could argue that the key word in
+> the excerpt is "executable".  I cannot see how code written in elisp
+> itself would need to be GPL.
+
+Exactly.  To quote again
+https://www.gnu.org/licenses/gpl-faq.html#IfInterpreterIsGPL:
+
+   When the interpreter just interprets a language, the answer is no.
+   The interpreted program, to the interpreter, is just data; a free
+   software license like the GPL, based on copyright law, cannot limit
+   what data you use the interpreter on. You can run it on any data
+   (interpreted program), any way you like, and there are no
+   requirements about licensing that data to anyone.
+
+** License
+
+>> There are other options, I believe, including release under public
+>> domain which I you could do, although others can argue that this is a
+>> bad thing to do.
+>
+> Few people find it bad to "release in the public domain".  Instead the
+> problem is that you can't do it.  Your work will/should fall into the
+> public domain at some point in the future (currently defined as
+> something like 75 years after your death, tho there are strong
+> commercial interests behind pushing this even further into the future),
+> but nobody (other than time itself) can do that.
+>
+> Instead, you can release under a license that mimics the effects of
+> something being in the public domain (e.g. the CC0 license).
+
+
+Indeed, it is clearer to use a CC0 license, since that is explicit.
+Whether you can do it or not is a slightly different issue, of course. I
+think that you are correct wrt to the US, outside of the US government.
+
+In the UK, I believe that the term "public domain" has much meaning wrt
+copyright as "fair use" or indeed the term "Jeremy Clarkson": i.e. none
+at all.
+
+** Copyright
+
+http://www.gesetze-im-internet.de/englisch_urhg/englisch_urhg.html#p0157
+
+* Network
+
+** How to boost your Wi-Fi connection
+
+http://www.youtube.com/watch?v=ARN13TAZlPk

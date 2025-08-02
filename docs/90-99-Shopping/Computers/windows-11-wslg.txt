@@ -1,0 +1,128 @@
+#+TITLE:     Windows 11 / WSLg
+#+AUTHOR:    Fabrice Niessen
+#+EMAIL:     (concat "fni" at-sign "pirilampo.be")
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:4 num:t toc:3
+
+#+FILETAGS:  :personal:
+#+SETUPFILE: ~/org/theme-readtheorg.setup
+
+* Notes
+
+- https://linuxhint.com/ls_colors_bash/
+- https://www.youtube.com/watch?v=b1YBx1L8op4
+- https://redmaple.tech/blogs/wsl-tips/
+- https://radu-matei.com/blog/random-wsl-tips/
+- https://www.youtube.com/watch?v=kY4Ns260i2k
+- https://stackoverflow.com/questions/48761771/my-wsl-terminal-lost-color
+
+* Réinitialiser Windows 11
+
+https://www.youtube.com/watch?v=HvsOyJhWq4c
+
+Couper l'Internet, à un certain moment, pour pouvoir créer un compte local !
+
+* Partitionner
+
+https://www.easeus.fr/partition-manager-tips/partitionner-un-ssd-sous-windows-11.html
+
+* Installer WSLg
+
+Run "Command Prompt" as an Administrator.
+Then:
+
+: wsl --list --online
+
+: wsl --install -d Ubuntu
+
+** Change home directory
+
+: usermod -d /mnt/d/homes/fni fni
+
+(https://superuser.com/questions/1132626/changing-home-directory-of-user-on-windows-subsystem-for-linux)
+
+** Upgrade packages
+
+Update the packages in your distribution
+
+: sudo apt update
+
+
+
+: sudo apt upgrade -y
+
+** Installer Emacs (dans WSLg, sans besoin de serveur X)
+
+: git clone git://git.sv.gnu.org/emacs.git
+: sudo apt install build-essential libgtk-3-dev libgnutls28-dev libtiff5-dev libgif-dev libjpeg-dev libpng-dev libxpm-dev libncurses-dev texinfo
+: cd emacs
+
+: sudo apt-get install autoconf
+
+: ./autogen.sh
+: ./configure --with-pgtk
+: make -j8
+: sudo make install
+
+https://emacsredux.com/blog/2021/12/19/using-emacs-on-windows-11-with-wsl2/
+
+*** See Update to a new Emacs version (on github.com/hubisan)
+
+* Installer Dotfiler
+
+: git clone https://github.com/svetlyak40wt/dotfier.git ~/.dotfiles
+
+: PATH=$PATH:$HOME/.dotfiles/bin
+
+: sudo apt install python
+
+** Add SSH keys
+
+Clone first the BitBucket "dotfiles_private_5_home" repository (with HTTPS), to
+get SSH private key files.
+
+: dot add https://mcpflow:APP_PASSWORD@bitbucket.org/mcpflow/dotfiles_private_5_home
+
+(In .dotfiles)
+: git checkout d9a6e71
+: dot update
+
+To enable changing file owners and permissions:
+
+: sudo su
+: cat > /etc/wsl.conf <<EOF
+: [automount]
+: options = "metadata"
+: EOF
+
+Close all WSL terminals
+
+*Restart your machine*, after saving =/etc/wsl.conf= in order for the changes to
+take place (or wsl --shutdown?).
+
+: chmod 400 ~/.ssh/*.pk
+
+: eval $(ssh-agent)
+
+: ssh-add ~/.ssh/id_fni_pirilampo_be_rsa4096.pk
+
+** Add new repo
+
+: dot add git@github.com/fniessen/dotfiles_default.git
+: dot add git@github.com/fniessen/emacs-leuven.git
+: dot add git@bitbucket.org:mcpflow/org_data.git
+
+: dot update
+
+* Install todoist
+
+* Install R
+
+: sudo apt install r-base-core
+
+: sudo Rscript -e 'install.packages("docopt")'
+: sudo Rscript -e 'install.packages("readxl")'
+: sudo Rscript -e 'install.packages("knitr")'
+: sudo Rscript -e 'install.packages("openxlsx")'
