@@ -7,19 +7,19 @@
 #+OPTIONS:   H:4 num:t toc:3
 
 #+FILETAGS:  :personal:
-#+SETUPFILE: ~/org/theme-readtheorg.setup
+#+SETUPFILE: ~/org/html-theme-readtheorg.setup
 
-* Achats
-
-** TODO Acheter un pied pour la caméra
-
-https://www.amazon.fr/Fotopro-tr%C3%A9pied-t%C3%A9l%C3%A9phone-rotation-portable/dp/B082MFZZHR
-
-* 90-99 Shopping                                                      :shopping:
+* Ventes
 
 ** TODO Vendre le lisseur de cheveux acheté pour Mar
 
 https://www.2dehands.be/seller/view/m2241284250
+
+* 90-99 Shopping                                                      :shopping:
+
+** TODO Acheter un pied pour la caméra
+
+https://www.amazon.fr/Fotopro-tr%C3%A9pied-t%C3%A9l%C3%A9phone-rotation-portable/dp/B082MFZZHR
 
 ** 91 Groceries
 
@@ -132,7 +132,7 @@ books, clothing, etc.).
 A catch-all for any miscellaneous purchases that don't fit into the above
 categories (this also allows flexibility for new areas of shopping to emerge).
 
-** 40.01 Shopping and Purchases                                       :shopping:
+** 40.01 Shopping and Purchases
 
 *** TODO Oura ring (qualité sommeil, activités, etc.)
 
@@ -363,8 +363,6 @@ https://www.youtube.com/watch?v=QedpQjxBPMA&list=PLlu0CT-JnSasQzGrGzddSczJQQU729
 
 https://www.thregr.org/~wavexx/software/screenkey/
 
-
-
 * Flowers
 
 ** Bonnes manières
@@ -427,13 +425,13 @@ Vacuum
 
 ** Composants électroniques envoyés par la poste pour 0,01 EUR
 
-Fort d’une expérience de 23 ans, TME est aujourd’hui l’un des distributeurs de
+Fort d'une expérience de 23 ans, TME est aujourd'hui l'un des distributeurs de
 composants électroniques parmi les plus dynamiques en Europe. Nous proposons
 plus de 115.000 produits, en provenance des plus importants fabricants de
 composants électroniques.
 
 Nous sommes devenus fournisseur et partenaire de dizaines de milliers
-d’entreprises en offrant une grande variété de produits, aussi bien à
+d'entreprises en offrant une grande variété de produits, aussi bien à
 la vente au détail qu'en gros, et à des prix raisonnables.
 
 http://dbaseserver.mistermail.nl/t/1370344/5019426/339614/0/utm_campaign=2013-10-02-free-delivery
@@ -508,7 +506,7 @@ Le longueur vous pouvez choisir
 A quelle dimension vous êtes intéressé svp ?
 
 Les prix sur le site internet sont TVA inclus et livraison inclus en Belgique (à
-partir d’un achat de €15)
+partir d'un achat de €15)
 #+end_verse
 
 ** TODO Tapis de four en silicone
