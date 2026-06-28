@@ -7,7 +7,7 @@
 #+OPTIONS:   H:4 num:t toc:2
 
 #+FILETAGS:  :personal:
-#+SETUPFILE: ~/org/theme-readtheorg.setup
+#+SETUPFILE: ~/org/html-theme-readtheorg.setup
 
 * Tasks
 
@@ -209,15 +209,15 @@ now teaching giants like Google Translate a lesson.
 
 DeepL is a free translation tool from DeepL GmbH company which uses the famous
 multilingual dictionary database, Linguee. Consequently, the real power behind
-Deep’l is *Linguee*. First and foremost, DeepL’s Artificial Intelligence is
+Deep'l is *Linguee*. First and foremost, DeepL's Artificial Intelligence is
 "learning" thanks to the millions of texts and translations posted on
 Linguee. DeepL is an abbreviation for "Deep Learning". However, one would expect
-Google AI to learn even more. Let’s not forget that the keyword "Google
+Google AI to learn even more. Let's not forget that the keyword "Google
 translate" is searched 45,500,000 times a month. Furthermore, DeepL AI and
 Google Translate AI both use neural network technology, and yet DeepL AI is,
 nevertheless, better. How does DeepL work better when using a similar
 technology? The answer is simple: the performance of a neural network depends on
-the *quality* of its learning 1 materials and not just on quantity. DeepL’s neural
+the *quality* of its learning 1 materials and not just on quantity. DeepL's neural
 networks evolve 2 from billions of high-quality translation segments from the
 Linguee database. Its main contributors are reliable sources: the European
 Parliament, Unesco patents and literary works.
@@ -945,7 +945,7 @@ makes much difference, but it's definitely faster. WORDS.CR is a file with
 197138 lines ending in '\r'.
 
 #+begin_example
-> time sed -e 's/\r//g' < WORDS.CR > /dev/null
+> time sed -e 's_\r__g' < WORDS.CR > /dev/null
 
 real 0m0.087s
 user 0m0.080s
@@ -1160,7 +1160,7 @@ https://stackoverflow.com/questions/39182483/how-to-use-x-windows-with-emacs-on-
 
 *** DONE Install .dotfiles
 
-=~/org/theme-bigblow.setup=
+=~/org/html-theme-bigblow.setup=
 
 *** DONE Install fonts
 
@@ -1223,7 +1223,7 @@ https://github.com/emacsist/the-art-of-command-line
 
 To view the non-extension related rules of LS_COLORS:
 
-: echo "$LS_COLORS" | sed 's/:/\n/g' | grep -v '\*.'
+: echo "$LS_COLORS" | sed 's_:_\n_g' | grep -v '\*.'
 
 To quickly fix the problem, (make other-writable files yellow on nobg):
 
@@ -2248,9 +2248,9 @@ others, i.e. **you are not free to remove freedom from others**.
 
 As for documentation, here I cite a bit of Elisp manual:
 
-    (a) The FSF's Back-Cover Text is: “You have the freedom to copy and
+    (a) The FSF's Back-Cover Text is: "You have the freedom to copy and
      modify this GNU manual.  Buying copies from the FSF supports it in
-     developing GNU and promoting software freedom.”
+     developing GNU and promoting software freedom."
 
 Just think about it: on 99% of published books it says:
 
