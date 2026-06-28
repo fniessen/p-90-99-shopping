@@ -7,7 +7,7 @@
 #+OPTIONS:   H:4 num:t toc:3
 
 #+FILETAGS:  :personal:
-#+SETUPFILE: ~/org/theme-readtheorg.setup
+#+SETUPFILE: ~/org/html-theme-readtheorg.setup
 
 * Notes
 
